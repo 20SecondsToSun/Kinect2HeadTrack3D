@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Kinect2HeadTrack3D", "Kinect2HeadTrack3D.vcxproj", "{BC1D4714-D1A5-42BA-ABCD-53296C62568A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC1D4714-D1A5-42BA-ABCD-53296C62568A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BC1D4714-D1A5-42BA-ABCD-53296C62568A}.Debug|Win32.Build.0 = Debug|Win32
+		{BC1D4714-D1A5-42BA-ABCD-53296C62568A}.Release|Win32.ActiveCfg = Release|Win32
+		{BC1D4714-D1A5-42BA-ABCD-53296C62568A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

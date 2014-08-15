@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BC1D4714-D1A5-42BA-ABCD-53296C62568A}</ProjectGuid>
+    <RootNamespace>Kinect2HeadTrack3D</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;..\..\..\\include;..\..\..\\boost;..\blocks\Cinder-KCB\src;..\blocks\Cinder-KCB\lib;$(KINECT_TOOLKIT_DIR)inc;$(KINECTSDK10_DIR)\inc;..\src\locations;..\src\kinect;..\src\locations\modes;..\blocks\Skinning\include;..\blocks\Skinning\include\assimp;..\src\elements;..\src\controller</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>"..\..\..\\include";..\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cinder-$(PlatformToolset)_d.lib;Kinect10.lib;KinectCommonBridge.lib;FaceTrackLib.lib;OpenGL32.lib;..\blocks\Skinning\lib\msw\assimp3.0D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\\lib\msw\$(PlatformTarget);$(KINECT_TOOLKIT_DIR)Lib\x86;$(KINECTSDK10_DIR)\lib\x86;..\blocks\Cinder-KCB\lib\$(PlatformTarget)\lib\$(Configuration)\$(PlatformToolset);..\blocks\Skinning\lib\msw\</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;LIBCPMT</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\..\..\\include;..\..\..\\boost;..\blocks\Cinder-KCB\src;..\blocks\Cinder-KCB\lib;$(KINECT_TOOLKIT_DIR)inc;$(KINECTSDK10_DIR)\inc;..\src\locations;..\src\kinect;..\src\locations\modes;..\blocks\Skinning\include;..\blocks\Skinning\include\assimp;..\src\elements;..\src\controller</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>"..\..\..\\include";..\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cinder-$(PlatformToolset).lib;Kinect10.lib;KinectCommonBridge.lib;FaceTrackLib.lib;OpenGL32.lib;..\blocks\Skinning\lib\msw\assimp3.0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\\lib\msw\$(PlatformTarget);$(KINECT_TOOLKIT_DIR)Lib\x86;$(KINECTSDK10_DIR)\lib\x86;..\blocks\Cinder-KCB\lib\$(PlatformTarget)\lib\$(Configuration)\$(PlatformToolset);..\blocks\Skinning\lib\msw\</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding />
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\blocks\Cinder-KCB\src\Kinect.cpp" />
+    <ClCompile Include="..\blocks\Skinning\src\Actor.cpp" />
+    <ClCompile Include="..\blocks\Skinning\src\AnimCurve.cpp" />
+    <ClCompile Include="..\blocks\Skinning\src\CustomIOStream.cpp" />
+    <ClCompile Include="..\blocks\Skinning\src\ModelIo.cpp" />
+    <ClCompile Include="..\blocks\Skinning\src\ModelSourceAssimp.cpp" />
+    <ClCompile Include="..\blocks\Skinning\src\ModelTargetSkinnedMesh.cpp" />
+    <ClCompile Include="..\blocks\Skinning\src\ModelTargetSkinnedVboMesh.cpp" />
+    <ClCompile Include="..\blocks\Skinning\src\Node.cpp" />
+    <ClCompile Include="..\blocks\Skinning\src\Skeleton.cpp" />
+    <ClCompile Include="..\blocks\Skinning\src\SkinnedMesh.cpp" />
+    <ClCompile Include="..\blocks\Skinning\src\SkinnedVboMesh.cpp" />
+    <ClCompile Include="..\blocks\Skinning\src\SkinningRenderer.cpp" />
+    <ClCompile Include="..\src\controller\HeadHelper.cpp" />
+    <ClCompile Include="..\src\controller\HeadsController.cpp" />
+    <ClCompile Include="..\src\elements\HeadObject.cpp" />
+    <ClCompile Include="..\src\Kinect2HeadTrack3DApp.cpp" />
+    <ClCompile Include="..\src\kinect\KinectAdapter.cpp" />
+    <ClCompile Include="..\src\locations\Instruction.cpp" />
+    <ClCompile Include="..\src\locations\Location.cpp" />
+    <ClCompile Include="..\src\locations\LocationEngine.cpp" />
+    <ClCompile Include="..\src\locations\MainGame.cpp" />
+    <ClCompile Include="..\src\locations\modes\FaceScreen.cpp" />
+    <ClCompile Include="..\src\locations\modes\Head3DScreen.cpp" />
+    <ClCompile Include="..\src\locations\modes\ModeBaseKinect.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\blocks\Cinder-KCB\lib\KinectCommonBridgeLib.h" />
+    <ClInclude Include="..\blocks\Cinder-KCB\src\Kinect.h" />
+    <ClInclude Include="..\blocks\Skinning\include\Actor.h" />
+    <ClInclude Include="..\blocks\Skinning\include\AMeshSection.h" />
+    <ClInclude Include="..\blocks\Skinning\include\AnimCurve.h" />
+    <ClInclude Include="..\blocks\Skinning\include\AnimTrack.h" />
+    <ClInclude Include="..\blocks\Skinning\include\CustomIOStream.h" />
+    <ClInclude Include="..\blocks\Skinning\include\Debug.h" />
+    <ClInclude Include="..\blocks\Skinning\include\ModelIo.h" />
+    <ClInclude Include="..\blocks\Skinning\include\ModelSourceAssimp.h" />
+    <ClInclude Include="..\blocks\Skinning\include\ModelTargetSkinnedMesh.h" />
+    <ClInclude Include="..\blocks\Skinning\include\ModelTargetSkinnedVboMesh.h" />
+    <ClInclude Include="..\blocks\Skinning\include\Node.h" />
+    <ClInclude Include="..\blocks\Skinning\include\Skeleton.h" />
+    <ClInclude Include="..\blocks\Skinning\include\SkinnedMesh.h" />
+    <ClInclude Include="..\blocks\Skinning\include\SkinnedVboMesh.h" />
+    <ClInclude Include="..\blocks\Skinning\include\SkinningRenderer.h" />
+    <ClInclude Include="..\include\Resources.h" />
+    <ClInclude Include="..\src\controller\HeadHelper.h" />
+    <ClInclude Include="..\src\controller\HeadsController.h" />
+    <ClInclude Include="..\src\elements\3DModelData.h" />
+    <ClInclude Include="..\src\elements\HeadObject.h" />
+    <ClInclude Include="..\src\kinect\KinectAdapter.h" />
+    <ClInclude Include="..\src\locations\Instruction.h" />
+    <ClInclude Include="..\src\locations\Location.h" />
+    <ClInclude Include="..\src\locations\LocationEngine.h" />
+    <ClInclude Include="..\src\locations\MainGame.h" />
+    <ClInclude Include="..\src\locations\modes\FaceScreen.h" />
+    <ClInclude Include="..\src\locations\modes\Head3DScreen.h" />
+    <ClInclude Include="..\src\locations\modes\ModeBaseKinect.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
